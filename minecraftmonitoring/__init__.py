@@ -1,12 +1,12 @@
-from .monitoring import Client
-
-from . import params, markdown
+from minecraftmonitoring.src.monitoring import Client
+import minecraftmonitoring.src.markdown as markdown
+import minecraftmonitoring.src.params as params
 
 import logging
 
 
 def logger(verbose: bool = False) -> None:
-    logger = logging.getLogger('mmom')
+    logger = logging.getLogger('minecraftmonitoring')
     logger.setLevel(logging.DEBUG)
 
     if verbose:

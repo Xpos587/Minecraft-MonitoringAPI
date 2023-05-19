@@ -1,4 +1,4 @@
-version = {
+version_list = {
     '1.2.3': 'ver123',
     '1.2.5': 'ver125',
     '1.3': 'ver13',

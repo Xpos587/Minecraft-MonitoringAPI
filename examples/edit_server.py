@@ -1,4 +1,4 @@
-from mmonitoring import Client, logger
+from minecraftmonitoring import Client, logger
 
 logger(True)
 

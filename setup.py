@@ -11,7 +11,7 @@ base_path = Path(__file__).parent
 long_description = (base_path / 'README.md').read_text()
 
 setuptools.setup(
-    name='mmon-api',
+    name='minecraft-monitoring-api',
     version='0.1.0',
     author='Xpos587',
     license='MIT',
@@ -24,12 +24,12 @@ setuptools.setup(
         'Operating System :: OS Independent'
     ],
     python_requires='>=3.7',
-    packages=setuptools.find_packages(),
+    packages=[],
     package_dir={
-        '': 'mmonitoring/src'
+        '': 'minecraftmonitoring/src'
     },
     include_package_data=True,
-    py_modules=['mmonitoring'],
+    py_modules=['minecraftmonitoring'],
     install_requires=['requests'],
-    url='https://github.com/Xpos587/Minecraft-MonitoringAPI'
+    url='https://github.com/Xpos587/minecraft-monitoring-api'
 )

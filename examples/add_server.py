@@ -1,4 +1,4 @@
-from mmonitoring import (
+from minecraftmonitoring import (
     Client,
     logger,
     markdown,

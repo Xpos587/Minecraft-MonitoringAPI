@@ -1,6 +1,6 @@
-from .models import AddServerResponse
+from minecraftmonitoring.src.models import AddServerResponse
 
-from .version import version
+from minecraftmonitoring.src.version import version_list
 
 import requests
 
@@ -8,7 +8,7 @@ import re
 
 import logging
 
-_logger = logging.getLogger('mmom')
+_logger = logging.getLogger('minecraftmonitoring')
 
 user_agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36'
 
@@ -57,10 +57,15 @@ class Client:
         self.__auth()
 
     def __auth(self):
-        return retryable_request(
+        response = retryable_request(
             self.session.get,
             self.url + '/acc'
         )
+
+        if '<title>Авторизация</title>' in response.text:
+            raise RuntimeError('Invalid token')
+
+        return response
 
     def add_server(
         self,
@@ -173,7 +178,7 @@ class Client:
                 'client_url': client_url,
                 'map_url': map_url,
                 'show_plugins': 'on' if show_plugins else 'off',
-                'forced_version_tag': version[server_version] if server_version else '',
+                'forced_version_tag': version_list[server_version] if server_version else '',
                 'address': address,
                 'submit': 'Обновить'
             },

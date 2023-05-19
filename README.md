@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-[![PyPi Version](https://img.shields.io/pypi/v/mmon-api.svg)](https://pypi.org/project/mmon-api/)
+[![PyPi Version](https://img.shields.io/pypi/v/minecraft-monitoring-api.svg)](https://pypi.org/project/minecraft-monitoring-api/)
 
 This is a reverse engineered API wrapper for [Minecraft-Monitroing.ru](https://monitoringminecraft.ru), which allow you automate the process.
 
@@ -31,7 +31,7 @@ Log into [Minecraft-Monitroing.ru](https://monitoringminecraft.ru) on any browse
 - Safari: Devtools > Storage > Cookies
 
 ### Using the Client:
-To use this library, simply import mmonitoring and create a mmonitoring.Client instance. The Client class accepts the following arguments:
+To use this library, simply import minecraftmonitoring and create a minecraftmonitoring.Client instance. The Client class accepts the following arguments:
 ```
 authautologin - The token to use.
 
@@ -40,9 +40,9 @@ user_agent - The user agent.
 
 Regular Example:
 ```python 
-from mmonitoring import Client
+from minecraftmonitoring import Client
 
-client = Client('auth_token')
+client = Client('auth_token', user_agent='Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1')
 ```
 
 ## Copyright:
