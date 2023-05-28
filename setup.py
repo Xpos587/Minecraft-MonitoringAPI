@@ -12,7 +12,7 @@ long_description = (base_path / 'README.md').read_text()
 
 setuptools.setup(
     name='minecraft-monitoring-api',
-    version='0.1.0',
+    version='0.1.2',
     author='Xpos587',
     license='MIT',
     description='This is a reverse engineered API wrapper for https://monitoringminecraft.ru/, which allow you automate the process.',
@@ -24,12 +24,12 @@ setuptools.setup(
         'Operating System :: OS Independent'
     ],
     python_requires='>=3.7',
-    packages=[],
-    package_dir={
-        '': 'minecraftmonitoring/src'
-    },
+    packages=['minecraftmonitoring'],
+    # package_dir={
+    #     '': 'minecraftmonitoring'
+    # },
     include_package_data=True,
-    py_modules=['minecraftmonitoring'],
+    # py_modules=['minecraftmonitoring'],
     install_requires=['requests'],
     url='https://github.com/Xpos587/minecraft-monitoring-api'
 )

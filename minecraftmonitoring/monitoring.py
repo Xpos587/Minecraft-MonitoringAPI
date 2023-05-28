@@ -1,6 +1,6 @@
-from minecraftmonitoring.src.models import AddServerResponse
+from .models import AddServerResponse
 
-from minecraftmonitoring.src.version import version_list
+from .version import version_list
 
 import requests
 

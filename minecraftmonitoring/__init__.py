@@ -1,6 +1,8 @@
-from minecraftmonitoring.src.monitoring import Client
-import minecraftmonitoring.src.markdown as markdown
-import minecraftmonitoring.src.params as params
+from .monitoring import Client
+from . import (
+    markdown,
+    params
+)
 
 import logging
 
@@ -14,3 +16,5 @@ def logger(verbose: bool = False) -> None:
         stream_handler = logging.StreamHandler()
         stream_handler.setFormatter(formatter)
         logger.addHandler(stream_handler)
+
+__author__ = 'Xpos587'
